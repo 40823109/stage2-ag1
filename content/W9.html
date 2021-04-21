@@ -134,85 +134,13 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">模擬問題與排解 << <a href='模擬問題與排解.html'>Previous</a> <a href='Sensor模擬問題與排解.html'>Next</a> >> Sensor模擬問題與排解<br /><h1>W8 Sensor Control</h1>
-<p><strong>增加接近傳感器使產品自動行走時，不會撞到障礙物</strong></p>
-<p>(<span>🔽程式碼</span>)</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
-    
-    
-end
-
-function sysCall_actuation()
-    
-end
-
-function sysCall_sensing()
-    
-end
-
-function sysCall_cleanup()
-    
-end
-
-
-
-function sysCall_afterDelete(inData)
-    for key,value in pairs(inData.objectHandles) do
-        print("Object with handle "..key.." was deleted")
-    end
-    
-end
-
-function sysCall_afterCreate(inData)
-    for key,value in pairs(inData.objectHandles) do
-        print("Object with handle "..value.." was created")
-    end
-end
---]]
-function speedChange_callback(ui,id,newVal)
-    speed=minMaxSpeed[1]+(minMaxSpeed[2]-minMaxSpeed[1])*newVal/100
-end
-
-function sysCall_init()
-    
-    bubbleRobBase=sim.getObjectAssociatedWithScript(sim.handle_self) 
-    leftMotor=sim.getObjectHandle("bubbleRob_leftMotor") 
-    rightMotor=sim.getObjectHandle("bubbleRob_rightMotor") 
-    noseSensor=sim.getObjectHandle("bubbleRob_sensingNose") 
-    minMaxSpeed={120*math.pi/180,300*math.pi/180} 
-    backUntilTime=-1 
-   
-        xml = '<ui activate="false" closeable="false" resizeable="false" title="'..sim.getObjectName(bubbleRobBase)..' speed">'..[[
-        <hslider id="1" maximum="100" minimum="0" onchange="speedChange_callback"></hslider>
-        <label style="* {margin-left: 300px;" text=""></label>
-        </ui>
-        ]]
-    ui=simUI.create(xml)
-    speed=(minMaxSpeed[1]+minMaxSpeed[2])*1
-    simUI.setSliderValue(ui,1,100*(speed-minMaxSpeed[1])/(minMaxSpeed[2]-minMaxSpeed[1]))
-end
-
-function sysCall_actuation()
-    result=sim.readProximitySensor(noseSensor) 
-    
-    if (result&gt;0) then backUntilTime=sim.getSimulationTime()+4 end 
-
-    if (backUntilTime&lt;sim.getSimulationTime()) then
-        
-        sim.setJointTargetVelocity(leftMotor,speed)
-        sim.setJointTargetVelocity(rightMotor,speed)
-    else
-        
-        sim.setJointTargetVelocity(leftMotor,-speed/5)
-        sim.setJointTargetVelocity(rightMotor,-speed/200)
-    end
-end
-
-function sysCall_cleanup()
-	simUI.destroy(ui)
-end
-</pre>
-<p><img alt="" height="302" src="./../images/障礙物模擬.gif" width="600"/></p><br />模擬問題與排解 << <a href='模擬問題與排解.html'>Previous</a> <a href='Sensor模擬問題與排解.html'>Next</a> >> Sensor模擬問題與排解</div>
+    <div id="tipue_search_content">Sensor模擬問題與排解 << <a href='Sensor模擬問題與排解.html'>Previous</a> <br /><h1>W9</h1>
+<p>程式模擬影片與PDF報告</p>
+<p><strong>方向鍵控制模擬</strong></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/7jbkQGgWKrI" title="YouTube video player" width="560"></iframe></p>
+<p><strong>感測器模擬</strong></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/7FvVDsfVPIU" title="YouTube video player" width="560"></iframe></p>
+<p><strong>PDF報告</strong></p><br />Sensor模擬問題與排解 << <a href='Sensor模擬問題與排解.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
