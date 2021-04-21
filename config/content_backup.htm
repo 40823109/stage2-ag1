@@ -2,12 +2,22 @@
 <p><span>Group website: </span><a href="https://a40823112.github.io/stage2-ag1/content/index.html">stage2-ag1</a></p>
 <p><span>Group<span> </span><span>repository</span><span> </span>:<span> </span></span><a href="https://github.com/a40823112/stage2-ag1">stage2-ag1</a></p>
 <p><span>Group<span> </span><span>Heroku</span><span> </span>:<span> </span></span><a href="https://dashboard.heroku.com/apps/stage2-ag1">stage2-ag1</a></p>
-<p><span>Group reveal.js : </span><a href="https://a40823112.github.io/stage2-ag1/reveal/index.html#/">stage2-ag1</a></p><h1>Work Distribution</h1>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h1>Work Distribution</h1>
+<p><a href="https://40823108.github.io/cd2021/content/index.html">40823108</a> :ㄏㄏㄏㄏㄏ</p>
+<p><a href="https://40823109.github.io/cd2021/content/index.html">40823109</a> :</p>
+<p><a href="https://a40823112.github.io/cd2021/content/index.html">40823112</a> :</p>
+<p><a href="https://40823145.github.io/cd2021/content/index.html">40823145</a> :</p>
+<h1>Copperation</h1>
+<p>=======</p>
+<p><span>Group reveal.js : </span><a href="https://a40823112.github.io/stage2-ag1/reveal/index.html#/">stage2-ag1</a></p>
+<h1>Work Distribution</h1>
 <p><a href="https://40823108.github.io/cd2021/content/index.html">40823108</a> : <span>coppeliasim</span>程式編寫與模擬、pdf報告製作、零件繪圖</p>
 <p><a href="https://40823109.github.io/cd2021/content/index.html">40823109</a> :<span>零件繪圖</span></p>
 <p><a href="https://a40823112.github.io/cd2021/content/index.html">40823112</a> :<span>coppeliasim</span><span>程式編寫與模擬、小組倉儲網站編輯、reveal報告製作</span></p>
 <p><a href="https://40823145.github.io/cd2021/content/index.html">40823145</a> :<span>小組倉儲網站編輯</span></p>
 <h1>Cooperation</h1>
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 5cd9c0128002df459e6e0b3f576726fab9f40350</p>
 <p>協同設計與版次管理能夠有效提升團隊工作效率，降低內容互相覆蓋，最終造成無法辨識是誰更改內容的情況。</p>
 <p></p>
 <p>領導主幹設立項目Project所需目標要求，主導至最終完成，協作者分支Branch由主幹分配負責工作區或衍生不同設計，各分支皆達到目標需求後合併回主幹，方能生產項目。</p>
@@ -22,13 +32,196 @@ cd stage2-ag1
 git remote add 40823145 https://github.com/40823145/stage2-ag1.git (add自己倉儲)
 </pre>
 <h1>Weekly progress</h1>
-<h2>W6</h2>
+<h2>W5</h2>
+<p>第五週分組專案開始，分組以第一次分組兩兩合併為主。</p>
+<p>組別為:stage2-ag1</p>
+<p>組員:</p>
+<p>       <a href="https://40823108.github.io/cd2021/content/index.html">40823108</a></p>
+<p>       <a href="https://40823109.github.io/cd2021/content/index.html">40823109</a></p>
+<p>       <a href="https://a40823112.github.io/cd2021/content/index.html">40823112</a></p>
+<p>       <a href="https://40823145.github.io/cd2021/content/index.html">40823145</a></p>
 <p>分組討論完，決定Stage2的<span>產品設計內容，為Stage1-ag1的產品進行改良，並新增其它功能:</span></p>
 <p><em><strong>1.利用鍵盤方向鍵操控</strong></em></p>
 <p><em><strong>2.增加接近傳感器使產品自動行走時，不會撞到障礙物</strong></em></p>
-<p><em><strong><img alt="" height="315" src="/images/EV3-6.jpg" width="560"/></strong></em></p>
+<p><em><img alt="" height="471" src="/images/EV3-6.jpg" width="837"/></em></p>
+<p>本次專案沿用stage1-ag1之專案，為了讓模型能夠按照我們的意思做動，我們嘗試編寫Lua程式並以方向鍵進行控制。</p>
+<p>下方為第一次測試程式與模擬圖</p>
+<p><img alt="" height="536" src="/images/EV3-12.jpg" width="953"/></p>
+<p><strong>Lua程式:</strong></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">threadFunction=function()
+    -- put your actuation code here
+ while sim.getSimulationState()~=sim.simulation_advancing_abouttostop do
+    -- Read the keyboard messages (make sure the focus is on the main window, scene view):
+        message,auxiliaryData=sim.getSimulatorMessage()
+        while message~=-1 do
+            if (message==sim.message_keypress) then
+if (auxiliaryData[1]==2007) then
+                -- up key
+                velocity=1000
+                torque=10000
+                Shape4 = 1000
+                Shape7 = 1000
+            end
+            if (auxiliaryData[1]==2008) then
+                -- down key
+                velocity=1000
+                torque=10000
+                Shape4 = 1000
+                Shape7 = 1000
+            end
+            if (auxiliaryData[1]==2009) then
+                -- left key
+                velocity=1000
+                torque=10000
+                Shape4 = 1000
+                Shape7 = 1000
+            end
+            if (auxiliaryData[1]==2010) then
+                -- right key
+                velocity=1000
+                torque=10000
+                Shape4 = 1000
+                Shape7 = 1000
+            end
+        end
+        message,auxiliaryData=sim.getSimulatorMessage()
+    end
+    if Shape4 == 1
+        then sim.setJointPosition(joint_1, 1000, orientation)
+    if Shape7 == 1
+        then sim.setJointPosition(joint_2, 1000, orientation)
+    end
+        sim.setJointTargetVelocity(joint,velocity)
+    end
+        joint_1=sim.getObjectHandle('joint_1')
+        joint_2=sim.getObjectHandle('joint_2')
+        Shape4=sim.getObjectHandle('Shape4')
+        Shape7=sim.getObjectHandle('Shape7')
+        velocity=0
+        torque=0
+        Shape4 = 0
+        Shape7 = 0
+end</pre>
+<p><span>因部分語法有誤，日後待除錯。</span></p>
+<h2>W6</h2>
+<p></p>
+<p>經過一週的時間，我們將程式進行了修改，但還是有錯誤，無法讓機構以上下左右鍵的方式進行控制。</p>
+<p>下方為模擬圖:</p>
+<p><img alt="" height="960" src="/images/EV3-13.jpg" width="1706"/></p>
+<p><span>第二次Lua程式測試:</span></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+    -- do some initialization here
+    left_front_handle= sim.getObjectHandle('left_front')
+    left_back_handle= sim.getObjectHandle('left_back')
+    right_back_handle= sim.getObjectHandle('right_back')
+    right_front_handle= sim.getObjectHandle('right_front')
+     
+    joint_1_handle= sim.getObjectHandle('joint_1')
+     
+    joint_2_handle= sim.getObjectHandle('joint_2')
+    MaxVel=10
+    leftvelocity=0
+    rightvelocity=0
+    dVel=0.5;
+    --sim.setJointTargetVelocity(left_front_handle,leftvelocity)
+    sim.setJointTargetVelocity(left_back_handle,leftvelocity)
+    sim.setJointTargetVelocity(right_back_handle,rightvelocity)
+    --sim.setJointTargetVelocity(right_front_handle,rightvelocity)
+end
+ 
+function sysCall_actuation()
+    -- put your actuation code here
+    message,auxiliaryData=sim.getSimulatorMessage()
+    while message~=-1 do
+        if (message==sim.message_keypress) then
+            if (auxiliaryData[1]==32) then
+                -- right key
+                leftvelocity=0
+                rightvelocity=0
+                sim.setJointForce(left_front_handle, 0)
+                sim.setJointForce(left_back_handle, 0)
+                sim.setJointForce(right_back_handle, 0)
+                sim.setJointForce(right_front_handle, 0)
+                 
+                 
+                sim.setJointForce(joint_1_handle, 1000)
+                 
+                sim.setJointForce(joint_2_handle, 1000)
+                break
+            else
+            --sim.setJointForce(left_front_handle, 10000)
+            sim.setJointForce(left_back_handle, 10000)
+            sim.setJointForce(right_back_handle, 10000)
+            --sim.setJointForce(right_front_handle, 10000)
+             
+            sim.setJointForce(joint_1_handle, 0)
+             
+            sim.setJointForce(joint_2_handle, 0)
+            end
+            if (auxiliaryData[1]==2007) then
+                -- up key
+                leftvelocity=(leftvelocity+rightvelocity)/2
+                rightvelocity=leftvelocity
+                leftvelocity=leftvelocity+dVel
+                rightvelocity=rightvelocity+dVel
+            end
+            if (auxiliaryData[1]==2008) then
+                -- down key
+                leftvelocity=(leftvelocity+rightvelocity)/2
+                rightvelocity=leftvelocity
+                leftvelocity=leftvelocity-dVel
+                rightvelocity=rightvelocity-dVel
+            end
+            if (auxiliaryData[1]==2009) then
+                -- left key
+                leftvelocity=leftvelocity-dVel
+                rightvelocity=rightvelocity+dVel
+            end
+            if (auxiliaryData[1]==2010) then
+                -- right key
+                leftvelocity=leftvelocity+dVel
+                rightvelocity=rightvelocity-dVel
+            end
+        end
+        message,auxiliaryData=sim.getSimulatorMessage()
+    end
+     
+    if leftvelocity&gt;MaxVel then
+        leftvelocity=MaxVel
+    end
+    if leftvelocity&lt;-MaxVel then
+        leftvelocity=-MaxVel
+    end
+     
+    if rightvelocity&gt;MaxVel then
+                rightvelocity=MaxVel
+    end
+    if rightvelocity&lt;-MaxVel then
+                rightvelocity=-MaxVel
+    end
+     
+    --sim.setJointTargetVelocity(left_front_handle,leftvelocity)
+    sim.setJointTargetVelocity(left_back_handle,leftvelocity)
+    sim.setJointTargetVelocity(right_back_handle,rightvelocity)
+    --sim.setJointTargetVelocity(right_front_handle,rightvelocity)
+     
+end
+ 
+function sysCall_sensing()
+    -- put your sensing code here
+end
+ 
+function sysCall_cleanup()
+    -- do some clean-up here
+end
+ 
+-- See the user manual or the available code snippets for additional callback functions and details</pre>
+<p><span>第二次程式失敗，日後將持續進除錯。</span></p>
+<p><span></span></p>
+<p></p>
 <h2>W7 Keyboard Control</h2>
 <p><strong>利用鍵盤操控物體行走</strong></p>
+<p><strong><img alt="" height="1040" src="/images/EV3-14.gif" width="1920"/></strong></p>
 <p>(<span>🔽程式碼</span>)</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init() 
     left_front_handle= sim.getObjectHandle('left_m')
@@ -100,7 +293,8 @@ function sysCall_actuation()
     end
     if rightvelocity&lt;-maxvel then="" rightvelocity="-MaxVel" end="" --sim="" setjointtargetvelocity="" left_front_handle="" leftvelocity="" sim="" setjointtargetvelocity="" left_back_handle="" leftvelocity="" sim="" setjointtargetvelocity="" right_back_handle="" rightvelocity="" --sim="" setjointtargetvelocity="" right_front_handle="" rightvelocity="" end="" pre=""&gt;<!---maxvel--><!---maxvel--></pre>
 <p><strong><mark></mark></strong></p>
-<p><strong><mark><img alt="" height="302" src="/images/方向鍵模擬.gif" width="600"/></mark></strong></p><h3>模擬問題與排解</h3>
+<p><strong><mark><img alt="" height="302" src="/images/方向鍵模擬.gif" width="600"/></mark></strong></p>
+<h3>模擬問題與排解</h3>
 <p><strong>問題:</strong> 當本體開啟運動模擬時會產生錯誤，導致產品解體</p>
 <p><img alt="" height="325" src="/images/HnHbWHruYE.gif" width="600"/></p>
 <p><strong></strong></p>
@@ -189,13 +383,15 @@ function sysCall_cleanup()
 	simUI.destroy(ui)
 end
 </pre>
-<p><img alt="" height="302" src="/images/障礙物模擬.gif" width="600"/></p><h3>Sensor模擬問題與排解</h3>
+<p><img alt="" height="302" src="/images/障礙物模擬.gif" width="600"/></p>
+<h3>Sensor模擬問題與排解</h3>
 <p><strong>問題:</strong>程式與感測器都確認無誤後，卻還是無法做動。</p>
 <p><img alt="" height="302" src="/images/感測無法做動.gif" width="600"/></p>
 <p></p>
 <p><strong>問題原因:</strong>與組員討論後發現，<span>感測器都沒有發生問題，不會做動的原因是程式打錯才無法驅動馬達。</span></p>
 <p></p>
-<p><strong>問題排解:</strong>更改產品物件的程式碼即可。</p><h2>W9</h2>
+<p><strong>問題排解:</strong>更改產品物件的程式碼即可。</p>
+<h2>W9</h2>
 <p>程式模擬影片與PDF報告</p>
 <p><strong>方向鍵控制模擬</strong></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/7jbkQGgWKrI" title="YouTube video player" width="560"></iframe></p>
