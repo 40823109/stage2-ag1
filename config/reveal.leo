@@ -296,6 +296,17 @@ vertical: body pane on the botton</t>
     &lt;h3&gt;產品設計報告&lt;/h3&gt;
 &lt;p&gt;&lt;iframe width="800" height="600" src="https://drive.google.com/file/d/1wedmypm9So7cyReRNaWF2WhBN8PPUgsP/preview"&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;/section&gt;</t>
-<t tx="leo.20210421120416.1"></t>
+<t tx="leo.20210421120416.1">&lt;section style="text-align: left;"&gt;
+    &lt;h1&gt;THE END&lt;/h1&gt;
+    &lt;p&gt;
+        - &lt;a href="https://a40823112.github.io/stage2-ag1/content/index.html"&gt;Back to the stage2-ag1
+site&lt;/a&gt; &lt;br&gt;
+        - &lt;a href="https://a40823112.github.io/cd2021/content/index.html"&gt;40823112 site&lt;/a&gt;&lt;br&gt;
+        - &lt;a href="https://40823109.github.io/cd2021/content/index.html"&gt;4823109 site&lt;/a&gt; &lt;br&gt;
+        - &lt;a href="https://40823108.github.io/cd2021/content/index.html"&gt;40823108 site&lt;/a&gt;
+         &lt;br&gt;
+        - &lt;a href="https://40823145.github.io/cd2021/content/index.html"&gt;40823145 site&lt;/a&gt;
+    &lt;/p&gt;
+&lt;/section&gt;</t>
 </tnodes>
 </leo_file>
