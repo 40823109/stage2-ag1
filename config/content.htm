@@ -220,8 +220,8 @@ end
     leftvelocity=0
     rightvelocity=0
     dVel=0.5;
-    --sim.setJointTargetVelocity(left_handle,leftvelocity)
-    --sim.setJointTargetVelocity(right_handle,rightvelocity)
+    sim.setJointTargetVelocity(left_handle,leftvelocity)
+    sim.setJointTargetVelocity(right_handle,rightvelocity)
 end
 
 function sysCall_actuation() 
@@ -232,12 +232,12 @@ function sysCall_actuation()
                 -- right key
                 leftvelocity=0
                 rightvelocity=0
-                sim.setJointForce(left_handle, 0)
-                sim.setJointForce(right_handle, 0)
+                sim.setJointForce(left_front_handle, 0)
+                sim.setJointForce(right_front_handle, 0)
                 break
             else
-                --sim.setJointForce(left_handle, 10000)
-                --sim.setJointForce(right_handle, 10000)
+                sim.setJointForce(left_handle, 10000)
+                sim.setJointForce(right_handle, 10000)
             end
             if (auxiliaryData[1]==2007) then
                 -- up key
@@ -270,13 +270,23 @@ function sysCall_actuation()
     if leftvelocity&gt;MaxVel then
         leftvelocity=MaxVel
     end
-    if leftvelocity&lt;-maxvel then="" leftvelocity="-MaxVel" end="" if="" rightvelocity=""&gt;MaxVel then
+    if leftvelocity&lt;-MaxVel then
+        leftvelocity=-MaxVel
+    end
+    
+    if rightvelocity&gt;MaxVel then
                 rightvelocity=MaxVel
     end
-    if rightvelocity&lt;-maxvel then="" rightvelocity="-MaxVel" end="" --sim="" setjointtargetvelocity="" left_front_handle="" leftvelocity="" sim="" setjointtargetvelocity="" left_back_handle="" leftvelocity="" sim="" setjointtargetvelocity="" right_back_handle="" rightvelocity="" --sim="" setjointtargetvelocity="" right_front_handle="" rightvelocity="" end="" pre=""&gt;<!---maxvel--><!---maxvel--></pre>
-<p><strong><mark></mark></strong></p>
+    if rightvelocity&lt;-MaxVel then
+                rightvelocity=-MaxVel
+    end
+    
+    sim.setJointTargetVelocity(left_handle,leftvelocity)
+    sim.setJointTargetVelocity(right_handle,rightvelocity)
+    
+end </pre>
 <p><strong><mark><img alt="" height="302" src="/images/方向鍵模擬.gif" width="600"/></mark></strong></p>
-<h3>模擬問題與排解</h3>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"><!---maxvel--><!---maxvel--></pre><h3>模擬問題與排解</h3>
 <p><strong>問題:</strong> 當本體開啟運動模擬時會產生錯誤，導致產品解體</p>
 <p><img alt="" height="325" src="/images/HnHbWHruYE.gif" width="600"/></p>
 <p><strong></strong></p>
