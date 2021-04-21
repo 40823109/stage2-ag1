@@ -1,0 +1,258 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+<meta property="head" content="H2">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>stage2-ag1</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">stage2-ag1</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='Introduction.html'>Introduction</a><li><a href='Work Distribution-1.html'>Work Distribution-1</a><li><a href='Copperation.html'>Copperation</a><li><a href='Work Distribution-2.html'>Work Distribution-2</a><li><a href='Cooperation.html'>Cooperation</a><li class='has-children'><a href='Weekly progress.html'>Weekly progress</a><ul class='dropdown'><li><a href='W5.html'>W5</a><li><a href='W6.html'>W6</a><li class='has-children'><a href='W7 Keyboard Control.html'>W7 Keyboard Control</a><ul class='dropdown'><li><a href='模擬問題與排解.html'>模擬問題與排解</a></li></ul><li class='has-children'><a href='W8 Sensor Control.html'>W8 Sensor Control</a><ul class='dropdown'><li><a href='Sensor模擬問題與排解.html'>Sensor模擬問題與排解</a></li></ul><li><a href='W9.html'>W9</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Weekly progress << <a href='Weekly progress.html'>Previous</a> <a href='W6.html'>Next</a> >> W6<br /><h1>W5</h1>
+<p>第五週分組專案開始，分組以第一次分組兩兩合併為主。</p>
+<p>組別為:stage2-ag1</p>
+<p>組員:</p>
+<p>       <a href="https://40823108.github.io/cd2021/content/index.html">40823108</a></p>
+<p>       <a href="https://40823109.github.io/cd2021/content/index.html">40823109</a></p>
+<p>       <a href="https://a40823112.github.io/cd2021/content/index.html">40823112</a></p>
+<p>       <a href="https://40823145.github.io/cd2021/content/index.html">40823145</a></p>
+<p>分組討論完，決定Stage2的<span>產品設計內容，為Stage1-ag1的產品進行改良，並新增其它功能:</span></p>
+<p><em><strong>1.利用鍵盤方向鍵操控</strong></em></p>
+<p><em><strong>2.增加接近傳感器使產品自動行走時，不會撞到障礙物</strong></em></p>
+<p><em><img alt="" height="471" src="./../images/EV3-6.jpg" width="837"/></em></p>
+<p>本次專案沿用stage1-ag1之專案，為了讓模型能夠按照我們的意思做動，我們嘗試編寫Lua程式並以方向鍵進行控制。</p>
+<p>下方為第一次測試程式與模擬圖</p>
+<p><img alt="" height="536" src="./../images/EV3-12.jpg" width="953"/></p>
+<p><strong>Lua程式:</strong></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">threadFunction=function()
+    -- put your actuation code here
+ while sim.getSimulationState()~=sim.simulation_advancing_abouttostop do
+    -- Read the keyboard messages (make sure the focus is on the main window, scene view):
+        message,auxiliaryData=sim.getSimulatorMessage()
+        while message~=-1 do
+            if (message==sim.message_keypress) then
+if (auxiliaryData[1]==2007) then
+                -- up key
+                velocity=1000
+                torque=10000
+                Shape4 = 1000
+                Shape7 = 1000
+            end
+            if (auxiliaryData[1]==2008) then
+                -- down key
+                velocity=1000
+                torque=10000
+                Shape4 = 1000
+                Shape7 = 1000
+            end
+            if (auxiliaryData[1]==2009) then
+                -- left key
+                velocity=1000
+                torque=10000
+                Shape4 = 1000
+                Shape7 = 1000
+            end
+            if (auxiliaryData[1]==2010) then
+                -- right key
+                velocity=1000
+                torque=10000
+                Shape4 = 1000
+                Shape7 = 1000
+            end
+        end
+        message,auxiliaryData=sim.getSimulatorMessage()
+    end
+    if Shape4 == 1
+        then sim.setJointPosition(joint_1, 1000, orientation)
+    if Shape7 == 1
+        then sim.setJointPosition(joint_2, 1000, orientation)
+    end
+        sim.setJointTargetVelocity(joint,velocity)
+    end
+        joint_1=sim.getObjectHandle('joint_1')
+        joint_2=sim.getObjectHandle('joint_2')
+        Shape4=sim.getObjectHandle('Shape4')
+        Shape7=sim.getObjectHandle('Shape7')
+        velocity=0
+        torque=0
+        Shape4 = 0
+        Shape7 = 0
+end</pre>
+<p><span>因部分語法有誤，日後待除錯。</span></p>
+<br />Weekly progress << <a href='Weekly progress.html'>Previous</a> <a href='W6.html'>Next</a> >> W6</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
