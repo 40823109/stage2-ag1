@@ -29,8 +29,18 @@
 <v t="leo.20200818170953.1"><vh>slide 3-2</vh></v>
 <v t="leo.20200818171010.1"><vh>slide 3-3</vh></v>
 </v>
-<v t="leo.20200818170725.1"><vh>slide 4</vh></v>
-<v t="leo.20200818171138.1"><vh>slide 5 </vh></v>
+<v t="leo.20200818170725.1"><vh>slide 4</vh>
+<v t="leo.20210421115353.1"><vh>slide4-1</vh></v>
+<v t="leo.20210421115418.1"><vh>slide4-2</vh></v>
+<v t="leo.20210421115647.1"><vh>slide4-3</vh></v>
+</v>
+<v t="leo.20200818171138.1"><vh>slide 5 </vh>
+<v t="leo.20210421115813.1"><vh>slide5-1</vh></v>
+<v t="leo.20210421115847.1"><vh>slide5-2</vh></v>
+<v t="leo.20210421120037.1"><vh>slide5-3</vh></v>
+<v t="leo.20210421120134.1"><vh>slide5-4</vh></v>
+</v>
+<v t="leo.20210421120416.1"><vh>slide 6</vh></v>
 </v>
 </v>
 </v>
@@ -198,11 +208,9 @@ vertical: body pane on the botton</t>
 
 </t>
 <t tx="leo.20200818170725.1">&lt;section&gt;
-    &lt;h2&gt;Slides&lt;/h2&gt;
-    &lt;p&gt;
-        Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at &lt;a href="https://slides.com" target="_blank"&gt;https://slides.com&lt;/a&gt;.
-    &lt;/p&gt;
+    @others
 &lt;/section&gt;
+
 
 </t>
 <t tx="leo.20200818170909.1">&lt;section&gt;
@@ -224,23 +232,9 @@ vertical: body pane on the botton</t>
     &lt;p&gt;&lt;img src="https://a40823112.github.io/stage2-ag1/images/HnHbWHruYE.gif" alt="" width="600" height="300"&gt;&lt;/p&gt;
     &lt;/a&gt;
 &lt;/section&gt;</t>
-<t tx="leo.20200818171138.1">&lt;section data-auto-animate&gt;
-    &lt;h2 data-id="code-title"&gt;Pretty Code&lt;/h2&gt;
-    &lt;pre data-id="code-animation"&gt;&lt;code class="hljs" data-trim data-line-numbers&gt;
-        import React, { useState } from 'react';
-
-        function Example() {
-          const [count, setCount] = useState(0);
-
-          return (
-            ...
-          );
-        }
-    &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;Code syntax highlighting courtesy of &lt;a href="https://highlightjs.org/usage/"&gt;highlight.js&lt;/a&gt;.&lt;/p&gt;
-&lt;/section&gt;
-
-</t>
+<t tx="leo.20200818171138.1">&lt;section&gt;
+    @others
+&lt;/section&gt;</t>
 <t tx="leo.20210421112959.1">&lt;section&gt;
     &lt;h2&gt;W6進度&lt;/h2&gt;
     &lt;br&gt;
@@ -264,5 +258,44 @@ vertical: body pane on the botton</t>
    &lt;p&gt;40823112:coppeliasim程式編寫與模擬、小組倉儲網站編輯、reveal報告製作&lt;/p&gt;
    &lt;p&gt;40823145:小組倉儲網站編輯&lt;/p&gt;
 &lt;/section&gt;</t>
+<t tx="leo.20210421115353.1">&lt;section&gt;
+    &lt;h2&gt;W8進度&lt;/h2&gt;
+    &lt;br&gt;
+    &lt;a href="#" class="navigate-down"&gt;
+        &lt;img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238" data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow"&gt;
+    &lt;/a&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20210421115418.1">&lt;section&gt;
+    &lt;h3&gt;Sensor偵測&lt;/h3&gt;
+    &lt;p&gt;利用接近傳感器，使車子不會撞到周遭的牆壁&lt;/p&gt;
+   &lt;p&gt;&lt;img src="https://a40823112.github.io/stage2-ag1/images/%E9%9A%9C%E7%A4%99%E7%89%A9%E6%A8%A1%E6%93%AC.gif" alt="" width="600" height="300"&gt;&lt;/p&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20210421115647.1">&lt;section&gt;
+    &lt;h3&gt;問題討論&lt;/h3&gt;
+    &lt;p&gt;程式與感測器都確認無誤後，卻還是無法做動。&lt;/p&gt;
+   &lt;p&gt;&lt;img src="https://a40823112.github.io/stage2-ag1/images/%E6%84%9F%E6%B8%AC%E7%84%A1%E6%B3%95%E5%81%9A%E5%8B%95.gif" alt="" width="600" height="300"&gt;&lt;/p&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20210421115813.1">&lt;section&gt;
+    &lt;h2&gt;W9進度&lt;/h2&gt;
+    &lt;br&gt;
+    &lt;a href="#" class="navigate-down"&gt;
+        &lt;img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238" data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow"&gt;
+    &lt;/a&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20210421115847.1">&lt;section&gt;
+    &lt;h3&gt;程式模擬影片&lt;/h3&gt;
+    &lt;p&gt;方向鍵操控模擬&lt;/p&gt;
+   &lt;iframe width="650" height="350" src="https://www.youtube.com/embed/7jbkQGgWKrI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20210421120037.1">&lt;section&gt;
+    &lt;h3&gt;程式模擬影片&lt;/h3&gt;
+    &lt;p&gt;Sensor偵測模擬&lt;/p&gt;
+   &lt;iframe width="650" height="350" src="https://www.youtube.com/embed/7FvVDsfVPIU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20210421120134.1">&lt;section&gt;
+    &lt;h3&gt;產品設計報告&lt;/h3&gt;
+&lt;p&gt;&lt;iframe width="800" height="600" src="https://drive.google.com/file/d/1wedmypm9So7cyReRNaWF2WhBN8PPUgsP/preview"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20210421120416.1"></t>
 </tnodes>
 </leo_file>
